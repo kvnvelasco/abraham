@@ -1,0 +1,2 @@
+[workspace]
+members = ['abraham', 'socket-server']
