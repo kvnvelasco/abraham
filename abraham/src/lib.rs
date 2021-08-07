@@ -16,8 +16,13 @@ lazy_static! {
 }
 
 pub async fn listen_for_messages() {
-    println!("To send a message to a child: type a message with the format");
+    println!(
+        "To begin, select a server above and connect to the server address via a websocket client"
+    );
+    println!("A UUID for that connection will be printed here. Send a message to that client by typing in this terminal and pressing RETURN");
     println!("{{uuid}}:{{message}}");
+    println!("Messages that clients send will also be forwarded here");
+
     loop {
         let mut buffer = String::new();
         std::io::stdin().read_line(&mut buffer);
